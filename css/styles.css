@@ -1,0 +1,95 @@
+.container {
+    margin-left: 400px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    top: auto;
+    position: fixed;
+    top: -100px;
+    width: 100%;
+    z-index: 1000;
+    background-color:transparent;
+    align-items: center;
+}
+
+li {
+    margin-right: 20px;
+    font-size: 32px;
+    color: black;
+}
+
+a.nav-link {
+text-decoration: none;
+color: black;
+transition: color 0.3s ease;
+}
+
+a.nav-link:hover {
+    color:#427cbe;
+}
+
+#box-left{
+    background-color: rgba(177, 169, 158, 0.466);
+    flex: 1; 
+    max-width: 50%;
+    padding: 20px;
+    text-align: left;
+    color: black;
+    margin-right: 40px;
+}
+
+p{
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+#form-right{
+    background-color: rgba(177, 169, 158, 0.466);
+    flex: 1;
+    height: 100%;
+    max-width: 50%;
+    padding: 20px;
+    color: black;
+    border-radius: 8px;
+}
+
+input[type="text"], 
+input[type="email"]{
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}	
+
+input[type="file"]{
+    min-width: 100px; /* Tamaño mínimo */
+    width: auto;
+    max-width: 80%;
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    border-radius: 5px;
+}
+
+button {
+    width: 85%;
+    padding: 12px;
+    background-color: #427cbe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+footer {
+    display: none;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
