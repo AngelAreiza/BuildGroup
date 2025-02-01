@@ -1,12 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <div class="collapse navbar-collapse">
+        <div class="container navbar-container">
             <a href="#" class="logo">
-                <img src="img/logo.png" alt="Logo" width="60" height="70"> 
+                <img src="img/logo.png" alt="Logo">
             </a>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+            <div class="collapse navbar-collapse navbar-nav">
+                <ul class="me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a href="servicios.php">Servicios</a></li>
+                    <li class="nav-item"><a href="p_proyectos.php">Proyectos</a></li>
                 </ul>
             </div>
         </div>
