@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: red;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <div class="collapse navbar-collapse">
     <a href="index.php" class="logo">
