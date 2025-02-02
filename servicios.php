@@ -3,6 +3,7 @@ include "header.php";
 include "navbar.php";
 ?>
 
+<main>
 <section id="services" class="py-5">
     <div class="container">
         <h2 class="text-center mb-4 text-primary">Nuestros Servicios</h2>
@@ -69,13 +70,15 @@ include "navbar.php";
     </div>
 </section>
 
+<section id="galleria">
+<h2 class="text-center mb-4 text-primary">Proyectos Destacados</h2>
 <div class="swiper mySwiper container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="swiper-txt">
-                    <h3>Lorem ipsum.</h3>
+                    <h3>Carretera.</h3>
                     <p>
-                        descripcion
+                        un proyecto de carretera
                     </p>
                     <img src="img/scroll1.jpg" alt="">
                 </div>
@@ -136,6 +139,8 @@ include "navbar.php";
             </div>
         </div>
     </div>
+</section>
+</main>
 <?php
 include "footer.php";
 ?>

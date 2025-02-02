@@ -1,45 +1,82 @@
-.logo img {
-    width: 70px;
-    height: 70px;
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
 }
 
-.navbar-nav { 
-    padding: 20px;  
-    margin-left: left;
+/* Navbar estilo Glassmorphism */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1); /* Transparente con glass effect */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
 }
 
 .navbar-nav a {
-    margin-left: 25px;
-    margin-right: 10px;
-    color: black;
+    color: white;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
 }
 
 .navbar-nav a:hover {
     color: #007bff;
 }
 
-#box-left{
+/* Logo */
+.logo img {
+    width: 70px;
+    height: 70px;
+}
+
+/* Sección principal */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 20px 50px; /* Ajuste para evitar que el navbar tape el contenido */
+}
+
+/* Estilos del contenido izquierdo */
+#box-left {
     background-color: rgba(177, 169, 158, 0.466);
-    flex: 1; 
-    padding-top: 40%;
-    max-width: 50%;
+    flex: 1;
     padding: 30px;
+    max-width: 50%;
     text-align: left;
     color: black;
     margin-right: 40px;
+    border-radius: 8px;
 }
 
-p{
+p {
     font-size: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
-#form-right{
+/* Formulario */
+#form-right {
     background-color: rgba(177, 169, 158, 0.466);
     flex: 1;
-    height: 100%;
     max-width: 35%;
     padding: 20px;
     color: black;
@@ -47,136 +84,98 @@ p{
 }
 
 input[type="text"], 
-input[type="email"]{
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}	
-
-#proyecto{
-    width: 80%;
-    align-items: flex-start;
-    justify-content: flex-start;
-    height: 200px;
+input[type="email"],
+#proyecto,
+input[type="file"] {
+    width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-input[type="file"]{
-    min-width: 100px; 
-    width: 80%;
-    max-width: 80%; 
-    padding: 10px; 
-    margin-bottom: 10px; 
-    border-radius: 5px;
+#proyecto {
+    height: 150px;
 }
 
 button {
-    width: 85%;
+    width: 100%;
     padding: 12px;
     background-color: #427cbe;
     color: white;
     border: none;
     border-radius: 5px;
     font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Sección de Servicios */
-#services h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: black !important;
+button:hover {
+    background-color: #365f91;
 }
 
-/* Estilo del acordeón */
-.accordion-item {
-    border-radius: 10px; /* Bordes redondeados */
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra fija */
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #box-left,
+    #form-right {
+        max-width: 90%;
+        margin: 20px auto;
+    }
 }
 
-.accordion-button {
-    font-size: 1.2rem;
-    color: white;
-    border: none;
-    padding: 15px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .navbar-nav a {
+        font-size: 18px;
+    }
+
+    #box-left {
+        padding-top: 10%;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    input[type="text"], 
+    input[type="email"], 
+    #proyecto, 
+    input[type="file"], 
+    button {
+        width: 100%;
+    }
 }
 
-.accordion-button:hover {
-    color: #fff;
-}
+@media (max-width: 480px) {
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
 
-.accordion-button:not(.collapsed)::after {
-    filter: invert(1); /* Cambia el color del ícono al expandir */
-}
+    .navbar-nav a {
+        font-size: 16px;
+    }
 
-.accordion-body {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.6;
-    padding: 15px;
-    border-top: 1px solid #ddd;
-}
+    p {
+        font-size: 16px;
+    }
 
-/* estilos para el carrusel */
-
-ul{
-    display: flex;
-}
-
-li{
-    padding: 0 20px;
-    text-transform: capitalize;
-    color: #222222;
-    font-size: 18px;
-}
-
-li a{
-    font-size: 18px;
-    color: #222222;
-    text-transform: capitalize;
-}
-
-.swiper-slide{
-    margin-bottom: 50px;
-    background-color: white;
-    box-shadow: 0 30px 30px rgb(0, 0, 0, 0.2);
-    border-radius: 15px;
-    height: 420px;
-    width: 295px;
-    position: relative;
-}
-
-.swiper-slide img{
-    width: 295px;
-    height: 420px;
-    border-radius: 15px;
-}
-
-.swiper-txt{
-    position: absolute;
-    padding: 20px;
-}
-
-.swiper-txt h3{
-    font-size: 20px;
-    margin-bottom: 5px;
-    color: #222222;
-}
-
-footer {
-    display: none;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    #box-left, #form-right {
+        max-width: 95%;
+    }
 }
